@@ -17,6 +17,8 @@ package demo;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -101,6 +103,12 @@ public class OAuth2AuthorizationServerConfiguration
 			details.setAuthorities(
 					AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER"));
 			details.setRegisteredRedirectUri(Collections.<String>emptySet());
+			//Set<String> urls = new HashSet<String>();
+			//urls.add("http://localhost:9999/");
+			//details.setRegisteredRedirectUri(urls);
+			
+				
+				
 			return details;
 		}
 

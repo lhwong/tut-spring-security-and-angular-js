@@ -19,7 +19,7 @@ export class AppComponent {
 
   authenticate() {
 
-    this.http.get('user').subscribe(response => {
+    this.http.get('/resource/user').subscribe(response => {
         if (response['name']) {
             this.authenticated = true;
             this.http.get('resource').subscribe(data => this.greeting = data);
